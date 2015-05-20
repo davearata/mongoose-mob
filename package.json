@@ -1,12 +1,15 @@
 {
   "name": "mongoose-mob",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "set of utilities for managing mongoose connections and models",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "David Arata",
+    "email": "dave.arata@dacatech.com"
   },
-  "repository": "user/repo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davearata/mongoose-mob.git"
+  },
   "license": "MIT",
   "files": [
     "index.js"

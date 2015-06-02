@@ -21,8 +21,8 @@
     "models"
   ],
   "dependencies": {
-    "lodash": "^3.8.0",
-    "mongoose": "^4.0.3"
+    "lodash": "^3.9.3",
+    "mongoose": "^4.0.4"
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",

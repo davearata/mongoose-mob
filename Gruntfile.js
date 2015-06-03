@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // Show elapsed time at the end
   require('time-grunt')(grunt);
   // Load all grunt tasks
@@ -21,12 +21,19 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
-    mochacli: {
-      options: {
-        reporter: 'nyan',
-        bail: true
-      },
-      all: ['test/*.js']
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'nyan',
+          require: [
+            function() {
+              var chai = require('chai');
+              global.should = chai.should();
+            }
+          ]
+        },
+        src: ['test/**/*.js']
+      }
     },
     watch: {
       gruntfile: {
@@ -35,14 +42,14 @@ module.exports = function (grunt) {
       },
       js: {
         files: '<%= jshint.js.src %>',
-        tasks: ['jshint:js', 'mochacli']
+        tasks: ['jshint:js', 'mochaTest']
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'mochacli']
+        tasks: ['jshint:test', 'mochaTest']
       }
     }
   });
 
-  grunt.registerTask('default', ['jshint', 'mochacli']);
+  grunt.registerTask('default', ['jshint', 'mochaTest']);
 };

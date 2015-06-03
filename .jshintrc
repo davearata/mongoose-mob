@@ -1,15 +1,24 @@
 {
-  "boss": true,
-  "curly": true,
-  "eqeqeq": true,
-  "eqnull": true,
-  "immed": true,
-  "latedef": true,
-  "mocha" : true,
-  "newcap": true,
-  "noarg": true,
-  "node": true,
-  "sub": true,
-  "undef": true,
-  "unused": true
+  "node": true, // Enable globals available when code is running inside of the NodeJS runtime environment.
+  "esnext": true, // Allow ES.next specific features such as const and let.
+  "bitwise": false, // Prohibit bitwise operators (&, |, ^, etc.).
+  "camelcase": false, // Permit only camelcase for `var` and `object indexes`.
+  "curly": false, // Require {} for every new block or scope.
+  "eqeqeq": true, // Require triple equals i.e. `===`.
+  "immed": true, // Require immediate invocations to be wrapped in parens e.g. `( function(){}() );`
+  "latedef": true, // Prohibit variable use before definition.
+  "newcap": true, // Require capitalization of all constructor functions e.g. `new F()`.
+  "noarg": true, // Prohibit use of `arguments.caller` and `arguments.callee`.
+  "quotmark": "single", // Define quotes to string values.
+  "undef": true, // Require all non-global variables be declared before they are used.
+  "unused": true, // Require there are no unused variables
+  "strict": true, // Require `use strict` pragma in every file.
+  "smarttabs": true, // Prohibit mixed tabs and spaces
+  "trailing": true, // Prohibit trailing whitespaces.
+  "indent": 2, // Specify indentation spacing
+  "noempty": true, // Prohibit use of empty blocks.
+  "mocha" : true, // defines globals exposed by the "BDD" and "TDD" UIs of the Mocha unit testing framework
+  "globals": {
+    "should": true
+  }
 }

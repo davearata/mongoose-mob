@@ -5,9 +5,9 @@ var _ = require('lodash');
 
 var connections = {};
 
-var connect = function connect(uri) {
+var connect = function connect(uri, opts) {
   //console.log('creating mongoose connection to: ' + uri);
-  var connection = mongoose.createConnection(uri);
+  var connection = mongoose.createConnection(uri, opts);
 
 
   connection.on('connected', function () {
@@ -35,12 +35,12 @@ var connect = function connect(uri) {
 module.exports = {
   Schema: mongoose.Schema,
 
-  getConnection: function getConnection(uri) {
+  getConnection: function getConnection(uri, opts) {
     if (_.isObject(connections[uri])) {
       return connections[uri];
     }
 
-    return connect(uri);
+    return connect(uri, opts);
   },
 
   getModel: function getModel(connection, name, schema) {

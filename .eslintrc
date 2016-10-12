@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "templateStrings": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": ["standard"],
+  "globals": {
+    "expect": false,
+    "should": false,
+    "sinon": false,
+    "getJeggy": false,
+    "loadFixtureData": false
+  }
+}

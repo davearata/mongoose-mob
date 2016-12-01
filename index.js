@@ -18,6 +18,8 @@ const connect = (uri, opts) => {
   // When the connection is disconnected
   connection.on('disconnected', () => log('Mongoose ' + uri + ' connection disconnected'))
 
+  connection.on('error', () => log('Mongoose ' + uri + ' connection errored'))
+
   connections[uri] = connection
 
   return connection

@@ -1,6 +1,6 @@
 {
   "name": "mongoose-mob",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "set of utilities for managing mongoose connections and models",
   "author": {
     "name": "David Arata",
@@ -40,26 +40,26 @@
     "models"
   ],
   "dependencies": {
-    "async-exit-hook": "^1.0.2",
+    "async-exit-hook": "^1.1.1",
     "co": "^4.6.0",
-    "debug": "^2.2.0",
-    "lodash": "^4.16.4",
-    "mongoose": "^4.6.4"
+    "debug": "^2.3.3",
+    "lodash": "^4.17.2",
+    "mongoose": "^4.7.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-core": "^6.17.0",
-    "babel-preset-es2015": "^6.16.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "eslint": "^3.7.1",
-    "eslint-config-standard": "^6.2.0",
-    "eslint-plugin-promise": "^3.0.0",
+    "eslint": "^3.11.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "isparta": "^4.0.0",
-    "lint-staged": "^3.0.3",
-    "mocha": "^3.1.2",
+    "lint-staged": "^3.2.1",
+    "mocha": "^3.2.0",
     "pre-commit": "^1.1.3",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0"

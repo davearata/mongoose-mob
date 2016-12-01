@@ -1,6 +1,6 @@
 {
   "name": "mongoose-mob",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "set of utilities for managing mongoose connections and models",
   "author": {
     "name": "David Arata",

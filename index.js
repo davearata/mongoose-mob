@@ -49,7 +49,7 @@ const closeConnection = (connection, uri) => {
   })
 }
 
-const closeAllConnections = callback => {
+export const closeAllConnections = callback => {
   log('closing all connections')
   co(function * () {
     for (const uri in connections) {
@@ -65,27 +65,30 @@ const closeAllConnections = callback => {
 
 exitHook(callback => closeAllConnections(callback))
 
-export const mongooseMob = {
-  Schema: mongoose.Schema,
+export const Schema = mongoose.Schema
 
-  closeAllConnections,
-
-  getConnection: function getConnection (uri, opts) {
-    if (_.isObject(connections[uri])) {
-      return connections[uri]
-    }
-
-    return connect(uri, opts)
-  },
-
-  getModel: function getModel (connection, name, schema) {
-    const modelNames = connection.modelNames()
-    if (_.includes(modelNames, name)) {
-      return connection.model(name)
-    } else {
-      return connection.model(name, schema)
-    }
+export const getConnection = (uri, opts) => {
+  if (_.isObject(connections[uri])) {
+    return connections[uri]
   }
+
+  return connect(uri, opts)
+}
+
+export const getModel = (connection, name, schema) => {
+  const modelNames = connection.modelNames()
+  if (_.includes(modelNames, name)) {
+    return connection.model(name)
+  } else {
+    return connection.model(name, schema)
+  }
+}
+
+export const mongooseMob = {
+  Schema,
+  closeAllConnections,
+  getConnection,
+  getModel
 }
 
 export default mongooseMob

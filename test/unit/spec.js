@@ -10,6 +10,7 @@ describe('mongoose-mob node module', function () {
 
   it('should export schema', function () {
     should.exist(Schema)
+    should.exist(Schema.Types)
   })
 
   it('should be able to call getmodel multiple times on same schema', function () {

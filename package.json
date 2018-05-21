@@ -1,6 +1,6 @@
 {
   "name": "mongoose-mob",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "set of utilities for managing mongoose connections and models",
   "author": {
     "name": "David Arata",
@@ -44,7 +44,7 @@
     "co": "^4.6.0",
     "debug": "^2.3.3",
     "lodash": "^4.17.2",
-    "mongoose": "^4.7.1"
+    "mongoose": "^5.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
